@@ -61,13 +61,13 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center pt-32 pb-16 overflow-hidden bg-white">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        
+
         {/* Main Hero Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-          
+
           {/* LEFT SIDE: Headline + CTAs (Slide in from Left) */}
           <div className="lg:col-span-5 flex flex-col items-start text-left">
-            
+
             {/* Category Pill */}
             <motion.div
               initial={{ x: -60, opacity: 0 }}
@@ -78,7 +78,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Staggered Headline Lines: BUILD. MARKET. GROW. */}
-            <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-black leading-[0.95] uppercase">
+            <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl  tracking-tight text-black leading-[0.95] uppercase">
               <motion.span
                 initial={{ x: -70, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -134,7 +134,7 @@ export default function HeroSection() {
 
           {/* RIGHT SIDE: Three Interactive Vertical Service Panels with Smooth Transform Expansion */}
           <div className="lg:col-span-7 w-full">
-            
+
             <div className="h-[440px] sm:h-[480px] w-full flex gap-3 sm:gap-4 select-none transform-gpu">
               {heroServices.map((service, idx) => {
                 const isExpanded = activeIndex === idx;
@@ -164,11 +164,10 @@ export default function HeroSection() {
                       onFocus={() => setActiveIndex(idx)}
                       tabIndex={0}
                       aria-expanded={isExpanded}
-                      className={`relative w-full h-full block border transition-colors duration-500 cursor-pointer group flex flex-col justify-between overflow-hidden rounded-sm ${
-                        isExpanded
+                      className={`relative w-full h-full block border transition-colors duration-500 cursor-pointer group flex flex-col justify-between overflow-hidden rounded-sm ${isExpanded
                           ? "shadow-xl border-[#FE8301]/80"
                           : "border-neutral-200/90 hover:border-neutral-400"
-                      }`}
+                        }`}
                     >
                       {/* Background Image with Cinematic Slow Zoom Transformation */}
                       <motion.div
@@ -222,7 +221,7 @@ export default function HeroSection() {
 
                       {/* Bottom Panel Content Layer (Smooth Unfolding Text Transition) */}
                       <div className="relative z-10 p-4 sm:p-6 text-white w-full overflow-hidden">
-                        
+
                         {/* NON-EXPANDED STATE: Vertical Rotated Typography */}
                         <motion.div
                           animate={{
@@ -230,9 +229,8 @@ export default function HeroSection() {
                             y: isExpanded ? 20 : 0
                           }}
                           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                          className={`absolute bottom-6 left-0 right-0 flex items-center justify-center ${
-                            isExpanded ? "pointer-events-none" : "pointer-events-auto"
-                          }`}
+                          className={`absolute bottom-6 left-0 right-0 flex items-center justify-center ${isExpanded ? "pointer-events-none" : "pointer-events-auto"
+                            }`}
                         >
                           <span
                             className="font-heading font-extrabold text-xs sm:text-sm tracking-widest text-white/90 uppercase whitespace-nowrap"
@@ -252,9 +250,8 @@ export default function HeroSection() {
                             y: isExpanded ? 0 : 25
                           }}
                           transition={{ duration: 0.6, delay: isExpanded ? 0.15 : 0, ease: [0.16, 1, 0.3, 1] }}
-                          className={`flex flex-col gap-2.5 ${
-                            isExpanded ? "pointer-events-auto" : "pointer-events-none"
-                          }`}
+                          className={`flex flex-col gap-2.5 ${isExpanded ? "pointer-events-auto" : "pointer-events-none"
+                            }`}
                         >
                           <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-white leading-tight">
                             {service.fullTitle}
