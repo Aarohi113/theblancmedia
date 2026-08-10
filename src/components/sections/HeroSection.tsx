@@ -110,7 +110,7 @@ export default function HeroSection() {
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-6 text-base sm:text-lg text-neutral-600 font-medium max-w-md leading-relaxed"
+              className="mt-6 font-subheading text-base sm:text-lg text-neutral-600 font-normal max-w-md leading-relaxed"
             >
               We build brands, campaigns, and digital flagships that capture attention and turn scroll into predictable growth.
             </motion.p>

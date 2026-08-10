@@ -59,7 +59,7 @@ export default function SectionHeader({
 
       {description && (
         <p
-          className={`mt-4 text-base sm:text-lg lg:text-xl leading-relaxed font-medium ${
+          className={`mt-4 font-subheading text-base sm:text-lg lg:text-xl leading-relaxed font-normal ${
             light ? "text-neutral-300" : "text-neutral-600"
           } ${align === "center" ? "max-w-2xl" : "max-w-2xl"}`}
         >
