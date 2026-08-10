@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-orange: #FE8301;
+  --color-orange-hover: #E57400;
+  --color-black: #000000;
+  --color-dark-grey: #111111;
+  --color-mid-grey: #666666;
+  --color-border-grey: #E5E5E5;
+  --color-light-grey: #F4F4F4;
+  --color-white: #FFFFFF;
+}
+
+@theme {
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --color-brand-orange: var(--color-orange);
+  --color-brand-black: var(--color-black);
+  --color-brand-light-grey: var(--color-light-grey);
+  --color-brand-white: var(--color-white);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Sora', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Utilities for 60/30/10 Color Hierarchy */
+.accent-orange {
+  color: var(--color-orange);
+}
+
+.bg-orange-accent {
+  background-color: var(--color-orange);
+}
+
+.border-orange-accent {
+  border-color: var(--color-orange);
+}
+
+/* Micro animations */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange);
+}
