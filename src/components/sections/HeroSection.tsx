@@ -156,7 +156,7 @@ export default function HeroSection() {
                       x: { duration: 0.8, delay: 0.35 + idx * 0.15, ease: [0.16, 1, 0.3, 1] },
                       opacity: { duration: 0.6, delay: 0.35 + idx * 0.15 }
                     }}
-                    className="relative rounded-sm overflow-hidden h-full transform-gpu"
+                    className="relative rounded-2xl overflow-hidden h-full transform-gpu"
                   >
                     <Link
                       href={`/services/${service.slug}`}
@@ -164,7 +164,7 @@ export default function HeroSection() {
                       onFocus={() => setActiveIndex(idx)}
                       tabIndex={0}
                       aria-expanded={isExpanded}
-                      className={`relative w-full h-full block border transition-colors duration-500 cursor-pointer group flex flex-col justify-between overflow-hidden rounded-sm ${isExpanded
+                      className={`relative w-full h-full block border transition-colors duration-500 cursor-pointer group flex flex-col justify-between overflow-hidden rounded-2xl ${isExpanded
                           ? "shadow-xl border-[#FE8301]/80"
                           : "border-neutral-200/90 hover:border-neutral-400"
                         }`}

@@ -6,6 +6,8 @@ export interface ServiceItem {
   shortDesc: string;
   heroHeadline: string;
   overview: string;
+  category?: string;
+  image?: string;
   capabilities: string[];
   deliverables: string[];
   metrics: { value: string; label: string }[];
@@ -19,6 +21,8 @@ export const servicesData: ServiceItem[] = [
     slug: "social-media-management",
     number: "01",
     title: "Social Media Management",
+    category: "CREATIVE & BRAND SOCIAL",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
     shortDesc: "Turn social noise into brand narrative and high-converting engagement across channels.",
     heroHeadline: "Build a Social Presence That Turns Scroll into Scale.",
     overview: "We construct high-frequency, aesthetic, and algorithmically optimized social engines. From viral short-form video production to bespoke visual curation, we make your brand impossible to scroll past.",
@@ -57,6 +61,8 @@ export const servicesData: ServiceItem[] = [
     slug: "ppc",
     number: "02",
     title: "PPC Advertising & Paid Media",
+    category: "PERFORMANCE & PAID ACQUISITION",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
     shortDesc: "Precision performance campaigns engineered for maximum return on ad spend.",
     heroHeadline: "Data-Driven Ads Built to Scale Revenue, Not Just Clicks.",
     overview: "Paid acquisition is math and psychology combined. We construct high-converting funnel architectures across Google Ads, Meta, and LinkedIn to turn every advertising dollar into predictable top-line revenue.",
@@ -95,6 +101,8 @@ export const servicesData: ServiceItem[] = [
     slug: "seo-gmb",
     number: "03",
     title: "SEO & Google Business Profile",
+    category: "SEARCH ENGINE DOMINATION",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     shortDesc: "Dominate search engine rankings and capture high-intent local and organic customers.",
     heroHeadline: "Command Organic Search & Dominate Your Market.",
     overview: "Sustainable business growth requires owning organic search intent. We combine technical SEO architecture, topical authority content strategies, and local GMB domination to lock in top search positions.",
@@ -133,6 +141,8 @@ export const servicesData: ServiceItem[] = [
     slug: "website-development",
     number: "04",
     title: "Website Development & UI/UX",
+    category: "BESPOKE DIGITAL ENGINEERING",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
     shortDesc: "Bespoke digital experiences built for lightning speed, editorial prestige, and high conversions.",
     heroHeadline: "Digital Flagships Built to Elevate Perception and Convert.",
     overview: "Your website is your brand's primary digital asset. We engineer custom high-performance websites built on Next.js and modern technologies that load instantly and turn visitors into qualified inquiries.",
