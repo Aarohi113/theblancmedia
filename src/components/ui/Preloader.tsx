@@ -14,6 +14,9 @@ export default function Preloader() {
     // Sequence timer: 3.2s total before triggering exit slide-up
     const timer = setTimeout(() => {
       setIsLoading(false);
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event("preloader-finished"));
+      }
     }, 3200);
 
     const cleanupTimer = setTimeout(() => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,6 +27,26 @@ interface ServicePanel {
 export default function HeroSection() {
   // Default expanded panel is index 0 (Social Media Management)
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [hasLoaded, setHasLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleFinished = () => setHasLoaded(true);
+    if (typeof window !== "undefined") {
+      window.addEventListener("preloader-finished", handleFinished);
+    }
+
+    // Fallback timer if preloader already finished or is not shown
+    const timer = setTimeout(() => {
+      setHasLoaded(true);
+    }, 3300);
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("preloader-finished", handleFinished);
+      }
+      clearTimeout(timer);
+    };
+  }, []);
 
   const heroServices: ServicePanel[] = [
     {
@@ -71,7 +91,7 @@ export default function HeroSection() {
             {/* Category Pill */}
             <motion.div
               initial={{ x: -60, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
+              animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -60, opacity: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             >
               <Badge text="Editorial Growth & Marketing Agency" className="mb-6" />
@@ -81,15 +101,15 @@ export default function HeroSection() {
             <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl  tracking-tight text-black leading-[0.95] uppercase">
               <motion.span
                 initial={{ x: -70, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -70, opacity: 0 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="block"
+                className="block italic font-heading"
               >
                 BUILD.
               </motion.span>
               <motion.span
                 initial={{ x: -70, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -70, opacity: 0 }}
                 transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 className="block"
               >
@@ -97,7 +117,7 @@ export default function HeroSection() {
               </motion.span>
               <motion.span
                 initial={{ x: -70, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
+                animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -70, opacity: 0 }}
                 transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="block text-[#FE8301]"
               >
@@ -108,7 +128,7 @@ export default function HeroSection() {
             {/* Subtitle Paragraph */}
             <motion.p
               initial={{ x: -60, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
+              animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -60, opacity: 0 }}
               transition={{ duration: 0.7, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
               className="mt-6 font-subheading text-base sm:text-lg text-neutral-600 font-normal max-w-md leading-relaxed"
             >
@@ -118,7 +138,7 @@ export default function HeroSection() {
             {/* CTAs */}
             <motion.div
               initial={{ x: -60, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
+              animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -60, opacity: 0 }}
               transition={{ duration: 0.7, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto"
             >
@@ -145,8 +165,8 @@ export default function HeroSection() {
                     layout
                     initial={{ x: 80, opacity: 0 }}
                     animate={{
-                      x: 0,
-                      opacity: 1,
+                      x: hasLoaded ? 0 : 80,
+                      opacity: hasLoaded ? 1 : 0,
                       flexGrow: isExpanded ? 3.5 : 1,
                       flexShrink: 1,
                       flexBasis: "0%"
