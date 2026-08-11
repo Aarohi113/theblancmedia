@@ -10,8 +10,8 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { agencyData } from "@/data/agencyData";
 
 // Easily replaceable image sources for the top 3 services
-const socialMediaImage = "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80";
-const ppcImage = "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80";
+const socialMediaImage = "/images/social-card.jpg";
+const ppcImage = "/images/ppc-card.jpg";
 const seoImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80";
 
 interface ServicePanel {

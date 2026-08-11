@@ -34,7 +34,7 @@ export default function ServicesSection() {
             <Sparkles className="h-3 w-3" />
             <span>Our Services</span>
           </div>
-          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white">
+          <h2 className="font-heading text-3xl font-normal tracking-tight text-white">
             Engineered for <span className="text-[#FE8301]">Scale.</span>
           </h2>
           <p className="text-neutral-400 text-xs font-medium mt-2 leading-relaxed">
@@ -74,7 +74,7 @@ export default function ServicesSection() {
 
                 {/* Title & Description */}
                 <div className="relative z-10 mt-auto">
-                  <h3 className="font-heading text-2xl font-extrabold text-white tracking-tight leading-tight">
+                  <h3 className="font-heading text-2xl font-normal text-white tracking-tight leading-tight">
                     {svc.title}
                   </h3>
                   
@@ -128,7 +128,7 @@ export default function ServicesSection() {
                   <Sparkles className="h-3 w-3" />
                   <span>Core Services</span>
                 </div>
-                <h2 className="font-heading text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
+                <h2 className="font-heading text-3xl lg:text-4xl font-normal tracking-tight text-white">
                   Engineered for <span className="text-[#FE8301]">Growth.</span>
                 </h2>
               </div>
@@ -175,7 +175,7 @@ export default function ServicesSection() {
 
                     {/* Minimalist Title & Description */}
                     <div className="relative z-10 mt-auto pt-8">
-                      <h3 className="font-heading text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight group-hover:text-[#FE8301] transition-colors duration-300">
+                      <h3 className="font-heading text-3xl lg:text-4xl font-normal text-white tracking-tight leading-tight group-hover:text-[#FE8301] transition-colors duration-300">
                         {svc.title}
                       </h3>
                       
