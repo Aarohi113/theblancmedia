@@ -51,34 +51,36 @@ export default function Navbar() {
       }`}
     >
       <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
-        {/* Brand Logo */}
-        <BrandLogo />
+        {/* Left Side Group: Brand Logo + Shifted Navigation Menu */}
+        <div className="flex items-center gap-10 lg:gap-14">
+          <BrandLogo />
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+          {/* Desktop Navigation Links (Shifted Left & Larger Font Size) */}
+          <nav className="hidden md:flex items-center gap-7 lg:gap-9">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
 
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`font-body font-semibold text-sm transition-colors duration-200 relative py-1 ${
-                  isActive
-                    ? "text-[#FE8301]"
-                    : "text-black hover:text-[#FE8301]"
-                }`}
-              >
-                {link.name}
-                {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FE8301] rounded-full" />
-                )}
-              </Link>
-            );
-          })}
-        </nav>
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`font-heading font-bold text-base sm:text-[17px] tracking-tight transition-colors duration-200 relative py-1 ${
+                    isActive
+                      ? "text-[#FE8301]"
+                      : "text-black hover:text-[#FE8301]"
+                  }`}
+                >
+                  {link.name}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#FE8301] rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
 
-        {/* Desktop Action CTA */}
+        {/* Right Side: Desktop Action CTA */}
         <div className="hidden md:flex items-center">
           <Button href="/contact" variant="primary" size="sm">
             Let's Talk

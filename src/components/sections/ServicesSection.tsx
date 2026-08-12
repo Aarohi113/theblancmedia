@@ -16,25 +16,25 @@ export default function ServicesSection() {
     offset: ["start start", "end end"],
   });
 
-  // Desktop horizontal X translation
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-68%"]);
+  // Desktop horizontal X translation for portrait cards
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-54%"]);
   
   // Header opacity transition for desktop
   const headerOpacity = useTransform(scrollYProgress, [0, 0.08, 0.92, 1], [1, 1, 1, 0.8]);
 
   return (
-    <section className="bg-[#09090b] text-white">
+    <section className="bg-[#18181B] text-white border-y border-neutral-800">
       {/* ========================================================= */}
       {/* MOBILE VIEW: Fullscreen Sticky Stacked Cards Scroll      */}
       {/* ========================================================= */}
       <div className="block md:hidden px-4 py-12">
         {/* Mobile Header */}
-        <div className="mb-8 border-b border-white/10 pb-6">
+        <div className="mb-8 border-b border-neutral-800 pb-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#FE8301]/30 bg-[#FE8301]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-[#FE8301] mb-2.5">
             <Sparkles className="h-3 w-3" />
             <span>Our Services</span>
           </div>
-          <h2 className="font-heading text-3xl font-normal tracking-tight text-white">
+          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white">
             Engineered for <span className="highlight-text-orange">Scale.</span>
           </h2>
           <p className="text-neutral-400 text-xs font-medium mt-2 leading-relaxed">
@@ -48,7 +48,7 @@ export default function ServicesSection() {
             <div
               key={svc.id}
               style={{ top: `${90 + index * 12}px` }}
-              className="sticky h-[80vh] w-full shrink-0 overflow-hidden rounded-2xl border border-white/15 bg-neutral-900 shadow-2xl transition-all duration-300"
+              className="sticky h-[75vh] w-full shrink-0 overflow-hidden rounded-3xl border border-white/15 bg-neutral-900 shadow-2xl transition-all duration-300"
             >
               <Link href={`/services/${svc.slug}`} className="relative flex h-full w-full flex-col justify-between p-6 sm:p-8">
                 {/* Background Image */}
@@ -74,7 +74,7 @@ export default function ServicesSection() {
 
                 {/* Title */}
                 <div className="relative z-10 mt-auto">
-                  <h3 className="font-heading text-2xl font-normal text-white tracking-tight leading-tight max-w-[50%]">
+                  <h3 className="font-heading text-2xl font-extrabold text-white tracking-tight leading-tight max-w-[70%]">
                     {svc.title}
                   </h3>
 
@@ -118,13 +118,13 @@ export default function ServicesSection() {
             style={{ opacity: headerOpacity }}
             className="relative z-10 w-full px-4 sm:px-8 lg:px-12 xl:px-16"
           >
-            <div className="flex items-end justify-between border-b border-white/10 pb-5">
+            <div className="flex items-end justify-between border-b border-neutral-800 pb-5">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#FE8301]/30 bg-[#FE8301]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-[#FE8301] mb-2.5">
                   <Sparkles className="h-3 w-3" />
                   <span>Core Services</span>
                 </div>
-                <h2 className="font-heading text-3xl lg:text-4xl font-normal tracking-tight text-white">
+                <h2 className="font-heading text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
                   Engineered for <span className="highlight-text-orange">Growth.</span>
                 </h2>
               </div>
@@ -137,7 +137,7 @@ export default function ServicesSection() {
 
           {/* Horizontal Card Track */}
           <div className="relative z-10 flex items-center my-auto overflow-hidden pl-8 lg:pl-16">
-            <motion.div style={{ x }} className="flex gap-8">
+            <motion.div style={{ x }} className="flex gap-7">
               {servicesData.map((svc, index) => (
                 <motion.div
                   key={svc.id}
@@ -145,9 +145,9 @@ export default function ServicesSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   viewport={{ once: true }}
-                  className="group relative h-[480px] lg:h-[520px] w-[480px] lg:w-[540px] shrink-0 overflow-hidden rounded-xl border border-white/10 bg-neutral-900 shadow-2xl transition-all duration-500 hover:border-[#FE8301]/60"
+                  className="group relative h-[500px] lg:h-[540px] w-[370px] lg:w-[410px] shrink-0 overflow-hidden rounded-3xl border border-white/10 bg-neutral-900 shadow-2xl transition-all duration-500 hover:border-[#FE8301]/60 hover:-translate-y-2 transform-gpu"
                 >
-                  <Link href={`/services/${svc.slug}`} className="relative flex h-full w-full flex-col justify-between p-8 lg:p-9">
+                  <Link href={`/services/${svc.slug}`} className="relative flex h-full w-full flex-col justify-between p-7 lg:p-8">
                     {/* Background Image */}
                     <div
                       className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
@@ -164,19 +164,19 @@ export default function ServicesSection() {
                       <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-neutral-300">
                         {svc.category || `SERVICE ${svc.number}`}
                       </span>
-                      <span className="font-heading text-xs font-bold text-neutral-400 tracking-widest uppercase border border-white/15 px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                      <span className="font-heading text-xs font-bold text-neutral-300 tracking-widest uppercase border border-white/20 px-2.5 py-0.5 rounded-full backdrop-blur-sm">
                         {svc.number} / 04
                       </span>
                     </div>
 
                     {/* Minimalist Title */}
                     <div className="relative z-10 mt-auto pt-8">
-                      <h3 className="font-heading text-3xl lg:text-4xl font-normal text-white tracking-tight leading-tight max-w-[50%] group-hover:text-[#FE8301] transition-colors duration-300">
+                      <h3 className="font-heading text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-tight max-w-[80%] group-hover:text-[#FE8301] transition-colors duration-300">
                         {svc.title}
                       </h3>
 
                       {/* Bottom Action Footer */}
-                      <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                      <div className="mt-6 flex items-center justify-between border-t border-white/15 pt-4">
                         <span className="text-xs font-semibold uppercase tracking-wider text-neutral-300 group-hover:text-white transition-colors">
                           Explore
                         </span>
@@ -195,7 +195,7 @@ export default function ServicesSection() {
 
           {/* Minimal Bottom Progress Track */}
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8">
-            <div className="flex items-center justify-between text-[11px] font-mono text-neutral-500 pb-2">
+            <div className="flex items-center justify-between text-[11px] font-mono text-neutral-400 pb-2">
               <span>01 / SOCIAL MEDIA</span>
               <span>04 / WEB DEV</span>
             </div>

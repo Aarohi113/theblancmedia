@@ -19,25 +19,25 @@ const statsCards = [
     value: "4.8x",
     label: "Average Client ROI",
     tag: "PERFORMANCE",
-    bgClass: "bg-gradient-to-br from-[#121212] via-[#1C1C1C] to-[#0A0A0A] border border-neutral-800 shadow-xl shadow-black/40",
+    bgClass: "bg-[#FE8301] text-white border border-orange-400/40 shadow-[10px_14px_30px_rgba(0,0,0,0.25)]",
   },
   {
     value: "$45M+",
     label: "Client Revenue Scaled",
     tag: "SCALED REVENUE",
-    bgClass: "bg-gradient-to-br from-[#FE8301] via-[#FF6A00] to-[#D94800] shadow-xl shadow-orange-500/30",
+    bgClass: "bg-[#FE8301] text-white border border-orange-400/40 shadow-[10px_14px_30px_rgba(0,0,0,0.25)]",
   },
   {
     value: "98%",
     label: "Client Retention Rate",
     tag: "TRUST & LOYALTY",
-    bgClass: "bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#020617] border border-slate-700/60 shadow-xl shadow-indigo-950/50",
+    bgClass: "bg-[#FE8301] text-white border border-orange-400/40 shadow-[10px_14px_30px_rgba(0,0,0,0.25)]",
   },
   {
     value: "120+",
     label: "Brands Elevated Globally",
     tag: "MARKET IMPACT",
-    bgClass: "bg-gradient-to-br from-[#064E3B] via-[#022C22] to-[#065F46] border border-emerald-500/40 shadow-xl shadow-emerald-950/50",
+    bgClass: "bg-[#FE8301] text-white border border-orange-400/40 shadow-[10px_14px_30px_rgba(0,0,0,0.25)]",
   }
 ];
 
@@ -106,7 +106,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center pt-32 pb-16 overflow-hidden bg-gradient-to-br from-[#FFF8EE] via-[#FAF6F0] to-[#F3EBE0]">
+    <section className="relative min-h-[85vh] flex flex-col justify-center pt-24 pb-10 overflow-hidden bg-gradient-to-br from-[#FFF8EE] via-[#FAF6F0] to-[#F3EBE0]">
       {/* Visible Ambient Radial Background Glows */}
       <div className="pointer-events-none absolute -top-32 -right-32 w-[700px] h-[700px] rounded-full bg-[#FE8301]/16 blur-[120px]" />
       <div className="pointer-events-none absolute top-1/3 -left-32 w-[600px] h-[600px] rounded-full bg-[#FF9A00]/14 blur-[130px]" />
@@ -129,32 +129,55 @@ export default function HeroSection() {
               <Badge text="Editorial Growth & Marketing Agency" className="mb-6" />
             </motion.div>
 
-            {/* Staggered Headline Lines: BUILD. MARKET. GROW. */}
-            <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl  tracking-tight text-black leading-[0.95] uppercase">
-              <motion.span
-                initial={{ x: -70, opacity: 0 }}
-                animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -70, opacity: 0 }}
-                transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="block font-heading"
-              >
-                BUILD.
-              </motion.span>
-              <motion.span
-                initial={{ x: -70, opacity: 0 }}
-                animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -70, opacity: 0 }}
-                transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                className="block"
-              >
-                MARKET.
-              </motion.span>
-              <motion.span
-                initial={{ x: -70, opacity: 0 }}
-                animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -70, opacity: 0 }}
-                transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="block highlight-text-orange"
-              >
-                GROW.
-              </motion.span>
+            {/* Staggered Main Headline: Make Your Brand The One They Remember. */}
+            <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-black leading-[1.05]">
+              {/* Mobile View: 3 High-Impact Lines */}
+              <div className="block sm:hidden flex flex-col gap-0.5">
+                <motion.span
+                  initial={{ x: -40, opacity: 0 }}
+                  animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -40, opacity: 0 }}
+                  transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                  className="block"
+                >
+                  Make Your
+                </motion.span>
+                <motion.span
+                  initial={{ x: -40, opacity: 0 }}
+                  animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -40, opacity: 0 }}
+                  transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  className="block"
+                >
+                  Brand The One
+                </motion.span>
+                <motion.span
+                  initial={{ x: -40, opacity: 0 }}
+                  animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -40, opacity: 0 }}
+                  transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                  className="block highlight-text-orange"
+                >
+                  They Remember.
+                </motion.span>
+              </div>
+
+              {/* Desktop View: 2 Lines */}
+              <div className="hidden sm:block">
+                <motion.span
+                  initial={{ x: -60, opacity: 0 }}
+                  animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -60, opacity: 0 }}
+                  transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="block font-heading"
+                >
+                  Make Your Brand
+                </motion.span>
+                <motion.span
+                  initial={{ x: -60, opacity: 0 }}
+                  animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -60, opacity: 0 }}
+                  transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="block highlight-text-orange"
+                >
+                  The One They Remember.
+                </motion.span>
+              </div>
             </h1>
 
 
@@ -208,6 +231,12 @@ export default function HeroSection() {
                   >
                     <Link
                       href={`/services/${service.slug}`}
+                      onClick={(e) => {
+                        if (typeof window !== "undefined" && window.innerWidth < 1024) {
+                          e.preventDefault();
+                          setActiveIndex(idx);
+                        }
+                      }}
                       onMouseEnter={() => setActiveIndex(idx)}
                       onFocus={() => setActiveIndex(idx)}
                       tabIndex={0}
@@ -322,8 +351,8 @@ export default function HeroSection() {
         </div>
 
         {/* Bunched Deck of Cards -> Unfolds horizontally into place on Scroll */}
-        <div className="mt-20 pt-10 border-t border-neutral-200/80 w-full">
-          <div className="flex flex-col items-center text-center mb-10">
+        <div className="mt-12 pt-6 border-t border-neutral-200/80 w-full">
+          <div className="flex flex-col items-center text-center mb-8">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#FE8301]">
               Proven Growth Metrics
             </span>
@@ -333,7 +362,8 @@ export default function HeroSection() {
           </div>
 
           <div className="w-full relative">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+            {/* Desktop View: Bunched deck unfolds horizontally */}
+            <div className="hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-6 w-full">
               {statsCards.map((stat, idx) => {
                 const initialX = (idx - 1.5) * -90;
                 const initialRotate = idx === 0 ? -7 : idx === 1 ? 5 : idx === 2 ? -4 : 6;
@@ -343,10 +373,10 @@ export default function HeroSection() {
                     key={idx}
                     initial={{
                       x: initialX,
-                      y: 40,
+                      y: 30,
                       rotate: initialRotate,
-                      scale: 0.88,
-                      opacity: 0.6
+                      scale: 0.9,
+                      opacity: 0.4
                     }}
                     whileInView={{
                       x: 0,
@@ -357,11 +387,13 @@ export default function HeroSection() {
                     }}
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{
-                      duration: 0.9,
-                      delay: idx * 0.14,
-                      ease: [0.16, 1, 0.3, 1]
+                      type: "spring",
+                      stiffness: 75,
+                      damping: 17,
+                      mass: 0.8,
+                      delay: idx * 0.1,
                     }}
-                    className={`relative p-6 sm:p-7 rounded-2xl ${stat.bgClass} transition-all duration-300 hover:-translate-y-2.5 hover:scale-[1.03] flex flex-col justify-between min-h-[170px] overflow-hidden group cursor-pointer`}
+                    className={`relative p-6 sm:p-7 rounded-2xl ${stat.bgClass} flex flex-col justify-between min-h-[170px] overflow-hidden group cursor-pointer transform-gpu hover:-translate-y-2 hover:scale-[1.02] transition-transform duration-300`}
                   >
                     {/* Layered Ambient Glow */}
                     <div className="absolute -top-12 -right-12 w-28 h-28 rounded-full bg-white/10 blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
@@ -387,6 +419,72 @@ export default function HeroSection() {
                 );
               })}
             </div>
+
+            {/* Mobile View: Alternate cards slide in from Left and Right on Scroll */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.1 }}
+              variants={{
+                hidden: {},
+                show: {
+                  transition: {
+                    staggerChildren: 0.18,
+                  },
+                },
+              }}
+              className="flex sm:hidden flex-col gap-5 w-full"
+            >
+              {statsCards.map((stat, idx) => {
+                const isEven = idx % 2 === 0;
+
+                return (
+                  <motion.div
+                    key={idx}
+                    variants={{
+                      hidden: {
+                        x: isEven ? -60 : 60,
+                        opacity: 0,
+                        scale: 0.94,
+                      },
+                      show: {
+                        x: 0,
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                          type: "spring",
+                          stiffness: 45,
+                          damping: 14,
+                          mass: 0.9,
+                        },
+                      },
+                    }}
+                    className={`relative p-6 rounded-2xl ${stat.bgClass} flex flex-col justify-between min-h-[160px] overflow-hidden group cursor-pointer transform-gpu shadow-xl`}
+                  >
+                    {/* Layered Ambient Glow */}
+                    <div className="absolute -top-12 -right-12 w-28 h-28 rounded-full bg-white/10 blur-xl pointer-events-none" />
+
+                    <div className="flex items-center justify-between z-10 mb-3">
+                      <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-md text-white/90">
+                        {stat.tag}
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white shrink-0">
+                        <TrendingUp className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    <div className="z-10">
+                      <div className="font-heading font-extrabold text-4xl text-white tracking-tight leading-none mb-1.5">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs font-medium text-white/85 leading-snug">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
           </div>
         </div>
 
