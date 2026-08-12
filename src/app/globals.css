@@ -96,9 +96,18 @@ h5, h6, .font-subheading, .subheading {
   background: var(--color-orange);
 }
 
-/* Premium & Elegant Orange Gradient Highlight with Editorial Serif Font */
+/* Custom Local Font: Junicode Italic from public/junicode.italic.ttf */
+@font-face {
+  font-family: 'CustomJunicodeItalic';
+  src: url('/junicode.italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Premium & Elegant Orange Gradient Highlight with Custom Junicode Italic Font */
 .highlight-text-orange {
-  font-family: 'Instrument Serif', 'Cormorant Garamond', 'Junicode', Georgia, serif;
+  font-family: 'CustomJunicodeItalic', 'Junicode', Georgia, serif;
   font-style: italic;
   background: linear-gradient(120deg, #FF7300 0%, #FE8301 45%, #D94800 100%);
   -webkit-background-clip: text;
