@@ -35,7 +35,7 @@ export default function ServicesSection() {
             <span>Our Services</span>
           </div>
           <h2 className="font-heading text-3xl font-normal tracking-tight text-white">
-            Engineered for <span className="text-[#FE8301]">Scale.</span>
+            Engineered for <span className="highlight-text-orange">Scale.</span>
           </h2>
           <p className="text-neutral-400 text-xs font-medium mt-2 leading-relaxed">
             Swipe down to scroll through our capabilities.
@@ -72,15 +72,11 @@ export default function ServicesSection() {
                   </span>
                 </div>
 
-                {/* Title & Description */}
+                {/* Title */}
                 <div className="relative z-10 mt-auto">
-                  <h3 className="font-heading text-2xl font-normal text-white tracking-tight leading-tight">
+                  <h3 className="font-heading text-2xl font-normal text-white tracking-tight leading-tight max-w-[50%]">
                     {svc.title}
                   </h3>
-                  
-                  <p className="mt-2 text-xs text-neutral-300 font-medium leading-relaxed line-clamp-3">
-                    {svc.shortDesc}
-                  </p>
 
                   {/* Bottom Action Line */}
                   <div className="mt-6 flex items-center justify-between border-t border-white/15 pt-4">
@@ -120,7 +116,7 @@ export default function ServicesSection() {
           {/* Top Header Bar */}
           <motion.div 
             style={{ opacity: headerOpacity }}
-            className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8"
+            className="relative z-10 w-full px-4 sm:px-8 lg:px-12 xl:px-16"
           >
             <div className="flex items-end justify-between border-b border-white/10 pb-5">
               <div>
@@ -129,7 +125,7 @@ export default function ServicesSection() {
                   <span>Core Services</span>
                 </div>
                 <h2 className="font-heading text-3xl lg:text-4xl font-normal tracking-tight text-white">
-                  Engineered for <span className="text-[#FE8301]">Growth.</span>
+                  Engineered for <span className="highlight-text-orange">Growth.</span>
                 </h2>
               </div>
 
@@ -173,15 +169,11 @@ export default function ServicesSection() {
                       </span>
                     </div>
 
-                    {/* Minimalist Title & Description */}
+                    {/* Minimalist Title */}
                     <div className="relative z-10 mt-auto pt-8">
-                      <h3 className="font-heading text-3xl lg:text-4xl font-normal text-white tracking-tight leading-tight group-hover:text-[#FE8301] transition-colors duration-300">
+                      <h3 className="font-heading text-3xl lg:text-4xl font-normal text-white tracking-tight leading-tight max-w-[50%] group-hover:text-[#FE8301] transition-colors duration-300">
                         {svc.title}
                       </h3>
-                      
-                      <p className="mt-2.5 text-sm text-neutral-300 font-medium leading-relaxed line-clamp-2 max-w-md">
-                        {svc.shortDesc}
-                      </p>
 
                       {/* Bottom Action Footer */}
                       <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">

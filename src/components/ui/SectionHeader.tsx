@@ -33,7 +33,7 @@ export default function SectionHeader({
     return (
       <>
         {parts[0]}
-        <span className="text-[#FE8301]">{highlightedWord}</span>
+        <span className="highlight-text-orange">{highlightedWord}</span>
         {parts[1]}
       </>
     );

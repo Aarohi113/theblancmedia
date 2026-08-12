@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 export default function ContactCTASection() {
   return (
     <section className="py-28 bg-[#F4F4F4] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10">
         <div className="bg-black text-white p-10 sm:p-16 lg:p-20 relative overflow-hidden border border-neutral-800">
           
           {/* Subtle Orange Accent Mesh in background */}
@@ -17,11 +17,11 @@ export default function ContactCTASection() {
 
             <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
               Have a Brand Ready <br className="hidden sm:block" />
-              <span className="text-[#FE8301]">to Grow?</span>
+              <span className="highlight-text-orange">to Grow?</span>
             </h2>
 
             <p className="text-neutral-300 text-base sm:text-lg max-w-xl leading-relaxed font-medium">
-              Let's turn your next campaign or web project into something people remember and competitors envy.
+              Let's turn your growth goals into market dominance.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">

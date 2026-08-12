@@ -25,7 +25,7 @@ export default function AboutTeaser() {
 
   return (
     <section className="py-24 bg-[#FAF9F6] text-black overflow-hidden border-y border-neutral-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16">
         
         {/* Top Header: Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16">
@@ -38,7 +38,7 @@ export default function AboutTeaser() {
               transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
               className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-black leading-[1.08]"
             >
-              Get the skills & strategy you need for a brand that is in demand<span className="text-[#FE8301]">.</span>
+              Skills & strategy built for a brand <span className="highlight-text-orange">In Demand.</span>
             </motion.h2>
           </div>
 
@@ -51,7 +51,7 @@ export default function AboutTeaser() {
               transition={{ duration: 0.9, delay: 0.2 }}
               className="text-neutral-600 text-base sm:text-lg font-medium leading-relaxed"
             >
-              The modern market dictates its own terms. Today, to be a competitive specialist requires more than standard agency execution.
+              We replace agency fluff with revenue engines engineered for performance.
             </motion.p>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { agencyData } from "@/data/agencyData";
 export default function ProcessSection() {
   return (
     <section className="py-24 bg-[#F4F4F4] border-b border-neutral-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16">
         
         <SectionHeader
           badge="Our Methodology"
