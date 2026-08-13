@@ -126,7 +126,7 @@ export default function HeroSection() {
               animate={hasLoaded ? { x: 0, opacity: 1 } : { x: -60, opacity: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Badge text="Editorial Growth & Marketing Agency" className="mb-6" />
+              <Badge text="DIGITAL MARKETING & GROWTH AGENCY" className="mb-6" />
             </motion.div>
 
             {/* Staggered Main Headline: Make Your Brand The One They Remember. */}
@@ -139,7 +139,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
                   className="block"
                 >
-                  Make Your
+                  Grow Your
                 </motion.span>
                 <motion.span
                   initial={{ x: -40, opacity: 0 }}
@@ -147,7 +147,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   className="block"
                 >
-                  Brand The One
+                  Brand With
                 </motion.span>
                 <motion.span
                   initial={{ x: -40, opacity: 0 }}
@@ -155,7 +155,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
                   className="block highlight-text-orange"
                 >
-                  They Remember.
+                  Marketing That Converts.
                 </motion.span>
               </div>
 
@@ -167,7 +167,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                   className="block font-heading"
                 >
-                  Make Your Brand
+                  Grow Your Brand With
                 </motion.span>
                 <motion.span
                   initial={{ x: -60, opacity: 0 }}
@@ -175,7 +175,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   className="block highlight-text-orange"
                 >
-                  The One They Remember.
+                  Marketing That Converts.
                 </motion.span>
               </div>
             </h1>
